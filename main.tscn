@@ -1,0 +1,364 @@
+[gd_scene format=3 uid="uid://bsk0f1rfo5d3p"]
+
+[ext_resource type="Script" uid="uid://bqla471ftnr7x" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://by1qk1emgywr0" path="res://assets/pieces/logotetris.png" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://cohw4d3ayvlvs" path="res://colourchange.gd" id="2_272bh"]
+[ext_resource type="FontFile" uid="uid://ddxnb2hx5qfmx" path="res://PixelifySans-VariableFont_wght.ttf" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://3ilc014x85a0" path="res://assets/pieces/minipieces.png" id="4_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://dicultec8mlq3" path="res://assets/backingtrack - 07:11:2026, 09.51.mp3" id="5_lquwl"]
+[ext_resource type="AudioStream" uid="uid://counxgjw5barl" path="res://assets/xmer-soft-treble-fast-collect-fade-out-ending-sound-effect-416828.mp3" id="6_7mycd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1n3l"]
+bg_color = Color(0.7888548, 0.6461674, 0.8907907, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rpek1"]
+bg_color = Color(0.7012932, 0.24039558, 0.9392553, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5hxx"]
+bg_color = Color(0.7790693, 0.5142095, 0.56531936, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bvp3"]
+atlas = ExtResource("4_1bvp3")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
+atlas = ExtResource("4_1bvp3")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mycd"]
+atlas = ExtResource("4_1bvp3")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_272bh"]
+atlas = ExtResource("4_1bvp3")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vw27"]
+atlas = ExtResource("4_1bvp3")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kek77"]
+atlas = ExtResource("4_1bvp3")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c57u"]
+atlas = ExtResource("4_1bvp3")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efxa6"]
+atlas = ExtResource("4_1bvp3")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rpek1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bvp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lquwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mycd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_272bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vw27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kek77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c57u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efxa6")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lecww"]
+bg_color = Color(0.8708948, 0.525579, 0.75939953, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y3m00"]
+bg_color = Color(0.5080959, 0.5808491, 0.8736213, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqd6r"]
+bg_color = Color(0.84841985, 0.4772879, 0.48097616, 1)
+
+[node name="Node2D" type="Node2D" unique_id=923163186]
+script = ExtResource("1_ig7tw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=932612807]
+anchor_mode = 0
+
+[node name="BG" type="CanvasLayer" parent="." unique_id=1500090039]
+layer = -4
+
+[node name="w" type="ColorRect" parent="BG" unique_id=1668755908]
+offset_left = -168.0
+offset_top = -200.0
+offset_right = -128.0
+offset_bottom = -160.0
+scale = Vector2(50.6552, 25.907368)
+color = Color(0.21613252, 0.7708282, 0.6043544, 1)
+script = ExtResource("2_272bh")
+
+[node name="ColorRect2" type="ColorRect" parent="BG" unique_id=606097657]
+offset_left = -872.0
+offset_top = -468.0
+offset_right = 308.0
+offset_bottom = 969.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="BG" unique_id=1315445784]
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 304.0
+offset_bottom = 638.0
+color = Color(0.7140851, 0.56272984, 0.6648004, 1)
+script = ExtResource("2_272bh")
+
+[node name="pieces" type="CanvasLayer" parent="." unique_id=2012638834]
+
+[node name="ticktimer" type="Timer" parent="." unique_id=1661687865]
+wait_time = 0.8
+autostart = true
+
+[node name="Control" type="Control" parent="." unique_id=1355023155]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 316.0
+offset_top = 7.0
+offset_right = 1145.0
+offset_bottom = 640.0
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control" unique_id=244947422]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0.5660922, 1.7688051e-06, 3.3691526e-07, 0.35686275)
+border_width = 5.0
+editor_only = false
+
+[node name="Control" type="Control" parent="Control/ReferenceRect" unique_id=1897819480]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9366437, 0.9366437)
+pivot_offset = Vector2(284, 310)
+
+[node name="TextureRect" type="TextureRect" parent="Control/ReferenceRect/Control" unique_id=2138308188]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -7.089614
+offset_bottom = 344.54846
+grow_horizontal = 2
+texture = ExtResource("2_0xm2m")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="Control/ReferenceRect/Control/TextureRect" unique_id=1103226979]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -8.5338745
+offset_top = -9.224897
+offset_right = 858.39136
+offset_bottom = 205.37112
+theme_override_styles/panel = SubResource("StyleBoxFlat_g1n3l")
+
+[node name="Panel3" type="Panel" parent="Control/ReferenceRect/Control" unique_id=172371198]
+layout_mode = 0
+offset_left = 151.6124
+offset_top = 212.8446
+offset_right = 413.9506
+offset_bottom = 407.93237
+theme_override_styles/panel = SubResource("StyleBoxFlat_rpek1")
+
+[node name="Panel4" type="Panel" parent="Control/ReferenceRect/Control" unique_id=1880918550]
+layout_mode = 0
+offset_left = 151.6124
+offset_top = 212.8446
+offset_right = 413.9506
+offset_bottom = 407.93237
+theme_override_styles/panel = SubResource("StyleBoxFlat_rpek1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ReferenceRect/Control" unique_id=1172937129]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -257.54938
+offset_top = 210.7093
+offset_right = -0.24768066
+offset_bottom = -225.84454
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="levelcount" type="Label" parent="Control/ReferenceRect/Control/VBoxContainer" unique_id=956357294]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2339792, 0.5680731, 1, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 51
+text = "Level"
+vertical_alignment = 2
+
+[node name="scorecount" type="Label" parent="Control/ReferenceRect/Control/VBoxContainer" unique_id=1540020516]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8341678, 0.74332315, 0, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 51
+text = "Score"
+vertical_alignment = 2
+
+[node name="linecount" type="Label" parent="Control/ReferenceRect/Control/VBoxContainer" unique_id=662523668]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5244204, 0.7398299, 0.68168133, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 51
+text = "Lines"
+vertical_alignment = 2
+
+[node name="Panel" type="Panel" parent="Control/ReferenceRect/Control" unique_id=871743348]
+layout_mode = 0
+offset_top = 275.83548
+offset_right = 96.09506
+offset_bottom = 371.9305
+theme_override_styles/panel = SubResource("StyleBoxFlat_u5hxx")
+
+[node name="nextdisplay" type="AnimatedSprite2D" parent="Control/ReferenceRect/Control/Panel" unique_id=253764381]
+position = Vector2(49.118793, 49.111507)
+rotation = -1.5707964
+scale = Vector2(1.1477431, 1.1477431)
+sprite_frames = SubResource("SpriteFrames_rpek1")
+
+[node name="ColorRect" type="ColorRect" parent="Control/ReferenceRect/Control/Panel" unique_id=1743703224]
+layout_mode = 0
+offset_left = 4.277848
+offset_top = 2.1352675
+offset_right = 92.892105
+offset_bottom = 17.082243
+color = Color(0.78039217, 0.5137255, 0.5647059, 1)
+
+[node name="Label" type="Label" parent="Control/ReferenceRect/Control/Panel" unique_id=1578219475]
+layout_mode = 0
+offset_top = -34.164536
+offset_right = 95.027374
+offset_bottom = 2.8354645
+theme_override_colors/font_color = Color(0.47677147, 0.32488838, 0.6656333, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 30
+text = "next:"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Control/ReferenceRect/Control" unique_id=600350515]
+layout_mode = 0
+offset_left = -12.804443
+offset_top = 416.7642
+offset_right = 690.7716
+offset_bottom = 649.51013
+theme_override_styles/panel = SubResource("StyleBoxFlat_lecww")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/ReferenceRect/Control/Panel2" unique_id=1921407735]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.6270294
+offset_bottom = 1.6270294
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/ReferenceRect/Control/Panel2/VBoxContainer2" unique_id=1449999705]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.6761689, 0.35396865, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 37
+text = "HOW TO PLAY"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/ReferenceRect/Control/Panel2/VBoxContainer2" unique_id=1986323570]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.93863904, 0.0002460444, 0.8236318, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 19
+text = "MAKE LINES TO CLEAR THEM OFF THE BOARD AND GAIN SCORE!
+THE SPEED OF THE GAME WILL INCREASE AS YOU GAIN LINES!
+UP: INSTANTLY MOVE DOWN
+DOWN: MOVE DOWN FASTER
+SIDES: MOVE TO THE SIDES
+SPACE: ROTATE THE PIECE
+WHEN THE BAR FILLS, PRESS SHIFT OR TAB TO SUMMON THE MEGA BAR!"
+horizontal_alignment = 1
+
+[node name="MegaBar" type="ProgressBar" parent="Control/ReferenceRect/Control" unique_id=1156318700]
+modulate = Color(0.64201796, 0.00035703392, 0.6548424, 1)
+layout_mode = 0
+offset_left = 698.24506
+offset_top = 235.2651
+offset_right = 844.512
+offset_bottom = 643.4132
+fill_mode = 3
+show_percentage = false
+
+[node name="Label2" type="Label" parent="Control/ReferenceRect/Control/MegaBar" unique_id=1239145875]
+layout_mode = 0
+offset_left = 1.0677109
+offset_top = -37.93785
+offset_right = 143.06406
+offset_bottom = -0.93785095
+theme_override_colors/font_color = Color(0.47677147, 0.32488838, 0.6656333, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 30
+text = "MEGA BAR"
+horizontal_alignment = 1
+
+[node name="Panel5" type="Panel" parent="Control/ReferenceRect/Control" unique_id=943077961]
+layout_mode = 0
+offset_left = 421.7258
+offset_top = 213.91225
+offset_right = 689.704
+offset_bottom = 408.22308
+theme_override_styles/panel = SubResource("StyleBoxFlat_y3m00")
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/ReferenceRect/Control/Panel5" unique_id=585508009]
+layout_mode = 0
+offset_left = 2.1352837
+offset_top = 50.179153
+offset_right = 264.77518
+offset_bottom = 190.34921
+theme_override_styles/fill = SubResource("StyleBoxFlat_tqd6r")
+show_percentage = false
+
+[node name="Label" type="Label" parent="Control/ReferenceRect/Control/Panel5" unique_id=11338592]
+layout_mode = 0
+offset_left = 2.1352837
+offset_top = 2.1352837
+offset_right = 265.8428
+offset_bottom = 73.6673
+theme_override_colors/font_color = Color(0.72329634, 0.36838144, 0.58438975, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 38
+text = "CLEAR LOW 3"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1565509757]
+stream = ExtResource("5_lquwl")
+autoplay = true
+
+[node name="levelsound" type="AudioStreamPlayer2D" parent="." unique_id=2141435432]
+stream = ExtResource("6_7mycd")
+volume_db = 24.0
+
+[connection signal="timeout" from="ticktimer" to="." method="_on_ticktimer_timeout"]
